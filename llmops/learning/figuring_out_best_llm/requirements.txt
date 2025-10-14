@@ -1,0 +1,6 @@
+typing
+torch
+huggingface_hub
+transformers
+hf_xet
+joblib

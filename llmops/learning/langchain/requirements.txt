@@ -1,0 +1,8 @@
+langchain
+pandas 
+numpy 
+requests
+dotenv
+langchain_openai
+langchain_core
+streamlit
