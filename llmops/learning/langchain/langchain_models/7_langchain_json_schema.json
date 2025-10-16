@@ -1,0 +1,26 @@
+{
+  "title": "QuestionClass",
+  "type": "object",
+  "description": "Schema to capture HR questions, their type, answers, and optional related links.",
+  "properties": {
+    "question": {
+      "type": "string",
+      "description": "Exact question that is asked by HR to you."
+    },
+    "question_type": {
+      "type": "string",
+      "description": "Type of question. Choose from ('personal', 'professional', 'project_related', 'soft_skills').",
+      "enum": ["personal", "professional", "project_related", "soft_skills"]
+    },
+    "answer": {
+      "type": "string",
+      "description": "Answer to the HR question."
+    },
+    "link": {
+      "type": ["string", "null"],
+      "description": "Optional link related to discussion or reference material."
+    }
+  },
+  "required": ["question", "question_type", "answer"],
+  "additionalProperties": false
+}

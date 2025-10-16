@@ -3,6 +3,7 @@
 from typing import TypedDict, Annotated, Optional, Literal
 from langchain_openai import ChatOpenAI
 from dotenv import load_dotenv
+from pydantic import BaseModel
 from resume_content import context
 
 load_dotenv()
@@ -13,7 +14,7 @@ model = ChatOpenAI(
 )
 
 
-class QuestionClass(TypedDict):
+class QuestionClass(BaseModel):
     question: Annotated[str, "Exact question that is asked by HR to you"]
     question_type: Annotated[str, "Choose type of question from ('personal', 'professional', 'project_related', 'soft_skills') "]
     answer: Annotated[str, "Answer of the question"]
